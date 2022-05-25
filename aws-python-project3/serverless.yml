@@ -1,0 +1,17 @@
+service: aws-python-project3
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.8
+  region: ap-south-1
+  
+
+functions:
+  hello:
+    handler: handler.hello
+    events: 
+    - http: 
+        path: /datapath
+        method: GET
